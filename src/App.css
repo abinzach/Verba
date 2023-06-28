@@ -1,38 +1,104 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+  padding: 0;
+  background-color: #F5F5F5;
+  
+}
+
+.outer{
+  display:flex;
+  flex-direction: column;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size: 26px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #333333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-container {
+  display: flex;
+}
+
+.button-generate,
+.button-meaning {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button-generate {
+  background-color: #1b1919;
+  color: #FFFFFF;
+}
+
+.button-generate:hover {
+  background-color: #494849;
+}
+
+.button-meaning {
+  background-image: linear-gradient(to left, #68a881, #68a881);
+  color: #FFFFFF;
+  background-size: 100% auto;
+  transition: background-position 0.3s ease;
+}
+
+.button-meaning:hover {
+  background-image: linear-gradient(to left, #68a881,#91a6d0);
+}
+
+.card {
+  margin-top: 10%;
+  font-size: 19px;
+  font-weight: regular;
+  color: #807f80;
+  max-width: 350px;
+}
+.logo {
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 0px; /* Add margin to create spacing */
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    margin: 20% auto;
   }
-  to {
-    transform: rotate(360deg);
+  .body {
+    max-height: 100vh;
+    overflow: hidden;
   }
 }
